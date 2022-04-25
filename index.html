@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es-us">
+  <head>
+    <title>To Do Master  List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="body">
+      <div class="content">
+          <header class="header">
+              <ul class="first_nav">
+                    <li class="nav menu">
+                          MENU
+                    </li>
+
+                    <li class="nav notification" id="wsp_logo">
+                            <img src="./images/whatsapp_logo_color.png" alt="whatsapp_logo" class="notification_logo">
+                    </li>
+              </ul>
+          </header>
+          <main class="main">
+              <div class="box" >
+                <h1 class="title" id="name">Hello,</h1>
+            <input type="text" id="user_name"  class="user_name" placeholder="Your name here" >
+              </div>
+
+            <h2 class="categories_title">
+                CATEGORIES
+            </h2>
+            <div class="categories">
+            </div>
+            <div class="todo">
+                <h3 class="todo_title">
+                     TO DO LIST
+                </h3>
+                <h3 class="todo_title hidde">
+                    TO DO LIST COMPLETED
+               </h3>
+               <h3 class="todo_title hidde">
+                TO DO LIST UNCOMPLETED
+           </h3>
+
+
+
+            </div>
+            <div class="hidden_menu">
+                <i class="close_tag"></i>
+                <img data="image/png;base64" src="./images/profile.png" alt="picture profile" class="profile_picture" id="img">
+                <label for="profile_picture" class="label_profile_picture">
+                    <img src="./images/camara_logo.png" alt="logo camara" class="logo_camara">
+                </label>
+                <input class="update_img" type="file" id="profile_picture" name="profile_picture">
+                <h2 class="profile_name"></h2>
+
+                <ul class="mitems">
+                    <li class="items item_allTask">
+                        <a href="#"  class="link">ALL TASKS</a>
+                    </li>
+                    <li class="items item_completed">
+                        <a href="#"class="link">COMPLETED TASKS</a>
+                    </li>
+                    <li class="items item_uncompleted">
+                        <a href="#" class="link">PENDING TASKS</a>
+                    </li>
+                </ul>
+
+            <!-- Wheater Card  -->
+                    <div class="card hide">
+                        <div class="card-image">
+                        <img class="img" src="./images/Day.png" />
+                        </div>
+                        <div class="card-content contentCard">
+                        <h5 class="font-c mitems">City Name</h5>
+                        <span class="font-c mitems">Weather Condition</span>
+                        <h3 class="font-c mitems">Temp &degC</h3>
+                        </div>
+                    </div>
+
+          <!-- End Card  -->
+
+            </div>
+            <div class="hidden_Taskmenu">
+                <i class="close_tag addmenu"></i>
+                <h2 class="title_Add_Task">New Task</h2>
+                    <label for="task_name" class="label_name">TASK NAME</label>
+                    <input type="text" id="task_name" class="task_name" placeholder = "Enter a new task" name="task_name" required/>
+                    <label for="task_category" class="label_category">CATEGORY</label>
+                    <input type="text" placeholder = "Enter the category of your task" class="task_category" id="task_category" name="task_category" required/>
+                    <input type="submit" value="ADD" class="button_addTask">
+            </div>
+
+            <div class="hidden_cellphone">
+                <i class="close_tag addmenu"></i>
+                <label class="label_phone">Add you cell phone to receive notifications </label>
+                <input class="input_phone" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+                <p class="label_note">You will receive your to do list in your phone by whatsapp</p>
+
+                <button class="button_send">Send</button>
+            </div>
+
+          </main>
+
+          <footer class="footer">
+            <div class="button_AddTask"></div>
+          </footer>
+      </div>
+
+     <!-- <script type=module src="../ToDoWebsite/script/script.js"></script>-->
+      <script type=module src="./Script/scriptNew.js"></script>
+  </body>
+  </html>

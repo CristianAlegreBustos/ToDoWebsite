@@ -1,0 +1,70 @@
+.hidden_cellphone{
+    display: none;
+}
+
+.cellphone_wrapper{
+    display: flex;
+    grid-column: 1/13;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    row-gap: 1em;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    z-index: 2;
+    margin: 0 auto;
+    @media screen and (min-width: 760px) {
+      row-gap: 2em;
+    }
+}
+.label_phone{
+  margin-top: 3.5em;
+  font-family: "Lora", serif;
+  font-size: medium;
+  font-weight: bold;
+  color: #0d2149;
+  align-self: center;
+  text-align: center;
+  @media screen and (min-width: 760px) {
+    font-size: x-large;
+  }
+}
+.label_note{
+  margin: 0.5em;
+  font-family: "Lora", serif;
+  font-size: medium;
+  font-weight: bold;
+  color: $brown;
+  align-self: center;
+  text-align: center;
+  @media screen and (min-width: 760px) {
+    font-size: x-large;
+  }
+}
+.input_phone{
+  border: 0.2em solid #463f1a;
+  width: 80%;
+  height: 10%;
+  font-size: medium;
+  appearance: none;
+  text-align: center;
+  @media screen and (min-width: 760px) {
+    font-size: x-large;
+  }
+}
+
+.button_send{
+  display: inline-flex;
+  font-family: "Lora", serif;
+  color: #463f1a;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  cursor: pointer;
+  margin-top: 2em;
+  width: 40%;
+  padding: 0.3em;
+}

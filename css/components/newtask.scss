@@ -1,0 +1,84 @@
+.hidden_Taskmenu {
+  display: none;
+}
+
+.Add_Task {
+  display: flex;
+  grid-column: 1/13;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  row-gap: 0.5em;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  z-index: 2;
+  @media screen and (min-width: 760px) {
+    margin: 0 auto;
+  }
+}
+
+.title_Add_Task {
+  padding-top: 1em;
+  font-size: 2em;
+  text-align: center;
+  margin: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-bottom: 0.8em;
+  margin-left: 0.5em;
+  font-family: $header-font;
+  color: $blue;
+  align-self: flex-start;
+  @media screen and (min-width: 424px) {
+    margin-bottom: 0.6em;
+  }
+  @media screen and (min-width: 800px) {
+    font-size: 2em;
+  }
+  @media screen and (min-width: 900px) {
+    margin-bottom: 1em;
+  }
+}
+
+.task_name,
+.task_category {
+  border: 0.2em solid $darkBrown;
+  width: 80%;
+  height: 10%;
+  font-size: x-large;
+  appearance: none;
+  &:focus {
+    background-color: $white;
+  }
+}
+
+.label_category,
+.label_name {
+  margin: 0.5em;
+  font-family: $paragraph-font;
+  font-size: x-large;
+  font-weight: bold;
+  color: $blue;
+  align-self: flex-start;
+}
+
+.button_addTask {
+  display: inline-flex;
+  font-family: 'Lora', serif;
+  color: #463f1a;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-size: 1.6em;
+  cursor: pointer;
+  margin-top: 2em;
+  width: 40%;
+  padding: 0.3em;
+}
+
+i.addmenu::after {
+  //margin-top: 0.5em;
+  font-size: 4em;
+}

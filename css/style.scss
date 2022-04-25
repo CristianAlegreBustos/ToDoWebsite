@@ -1,0 +1,354 @@
+@import 'components/setting.scss';
+@import 'components/firstnav.scss';
+@import 'components/menu.scss';
+@import 'components/newtask.scss';
+@import 'components/wheaterCard.scss';
+@import 'components/phoneMenu.scss';
+
+.body {
+  background-color: white
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 0.12fr 0.5fr repeat(10, 0.5fr);
+  background-color: white;
+  box-shadow:  inset 0px 2px 2px 2px #60482c86;
+  border-radius: 1em;
+  @media screen and (min-width: 424px) {
+    grid-template-rows: 0.12fr 0.2fr repeat(10, 0.5fr);
+  }
+  @media screen and (min-width: 760px) {
+    grid-template-rows: 0.12fr 0.5fr repeat(10, 0.5fr);
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 780px) {
+    margin: 0 5% auto;
+  }
+  @media screen and (min-width: 930px) {
+    grid-template-rows: 0.12fr 0.6fr repeat(10, 0.5fr);
+    margin: 0 10% auto;
+  }
+  @media screen and (min-width: 1000px) {
+    margin: 0 15% auto;
+  }
+  @media screen and (min-width: 1160px) {
+    margin: 0 20% auto;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 0.5fr;
+  grid-column: 1/13;
+  grid-row: 1/3;
+}
+.main {
+  display: grid;
+  grid-column: 1/13;
+  grid-row: 3/12;
+}
+.title {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  font-family: $header-font;
+  color: $lightblue;
+  @media screen and (min-width: 400px) {
+    font-size: 1.5em;
+  }
+  @media screen and (min-width: 424px) {
+    margin-bottom: 0.6em;
+  }
+  @media screen and (min-width: 700px) {
+    font-size: 1.7em;
+  }
+  @media screen and (min-width: 800px) {
+    font-size: 2em;
+  }
+}
+
+.task {
+  &_description {
+    font-family: $header-font;
+  }
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.5rem;
+  grid-auto-flow: dense;
+  grid-column: 1/13;
+  grid-row: 3/4;
+  margin-left: 0.5rem;
+  &_title {
+    margin: 0em;
+    font-family: $paragraph-font;
+    grid-column: 1/13;
+    grid-row: 2/3;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 1em;
+    color: $blue;
+  }
+}
+
+.category {
+  display: grid;
+  grid-template-rows: repeat(8, 0.5fr);
+  grid-column: span 1;
+  border: 2px solid $darkBrown;
+  background-color: $white;
+
+  &_counter {
+    margin: 0;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    font-family: $header-font;
+    margin-top: 0.2em;
+    margin-left: 0.5em;
+    font-weight: bold;
+    color: $lightblue;
+  }
+  &_title {
+    font-family: $header-font;
+    grid-row: 3/4;
+    margin: 0;
+    margin-left: 0.5em;
+    grid-column: 1/3;
+    font-size: x-large;
+    color: $brown;
+    cursor: pointer;
+  }
+}
+
+.progress_bar {
+  left: 10vw;
+  top: 2vw;
+  width: 90%;
+  height: 10px;
+  grid-row: 6/7;
+  grid-column: 1/3;
+  background-color: $lightblue;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  border-radius: 50px;
+  z-index: 0;
+}
+.fill_bar {
+  left: 10vw;
+  grid-row: 6/7;
+  grid-column: 1/3;
+  top: 2vw;
+  width: 4%;
+  height: 10px;
+  background-color: $red;
+  border-radius: 50px;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  z-index: 1;
+}
+
+.todo {
+  display:flex;
+  grid-row: 4/7;
+  grid-column: 1/13;
+  flex-direction: column;
+
+  &_title {
+    font-family: $paragraph-font;
+    color: $blue;
+    margin-left: 1rem;
+  }
+}
+
+.task {
+  &_todo {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.5fr;
+    background-color: $white;
+  }
+  &_checked {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    appearance: none;
+    width: 3em;
+    height: 3em;
+    border-radius: 2em;
+    border: 3px solid $red;
+    margin: o auto;
+    margin-top: 0.36em;
+    cursor: pointer;
+    &:hover {
+      background-color: $red;
+    }
+  }
+  &_description {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-weight: 600;
+    font-size: medium;
+    color: $brown;
+    cursor: pointer;
+  }
+}
+
+.footer {
+  display: grid;
+  grid-row: 12/13;
+  grid-column: 1/13;
+
+}
+
+.button_AddTask {
+  position: sticky;
+  background-color: $white;
+  background-image: url(../images/Add_Icon.png);
+  background-position: center;
+  background-size: cover;
+  left: 75%;
+  top: 90%;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 4.5em;
+  margin-bottom: 0.7em;
+  border: 0.2em solid $lightblue;
+  cursor: pointer;
+  @media screen and (min-width: 400px) {
+    left: 80%;
+  }
+  @media screen and (min-width: 500px) {
+    left: 85%;
+  }
+  @media screen and (min-width: 700px) {
+    left: 90%;
+  }
+  @media screen and (min-width: 800px) {
+    width: 4.5em;
+    height: 4.5em;
+    left: 82%;
+  }
+  @media screen and (min-width: 900px) {
+    left: 80%;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 5.5em;
+    height: 5.5em;
+    left: 73%;
+  }
+  @media screen and (min-width: 1100px) {
+    left: 70%;
+  }
+  &:hover {
+    background-color: $lightblue;
+    background-image: url(../images/Add_Icon_hoover.png);
+    border-color: white;
+  }
+}
+
+.taskwrap {
+  display: block;
+  order:2;
+  width: 98%;
+  margin: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0em;
+  @media screen and (min-width:800px) {
+    margin-bottom: 0.5rem;
+  }
+}
+.task_completed,
+.otherClass {
+  display: flex;
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+  cursor: pointer;
+  flex-grow: 3;
+  margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  @media screen and (min-width:800px) {
+    margin-bottom: 0.1em;
+  }
+}
+
+.delete {
+  //display: flex;
+  background-image: url(../images/trash.png);
+  background-size: 2em 2em;
+  background-repeat: no-repeat;
+  background-position-y: center;
+
+  display: inline-block;
+  width: 2em;
+  grid-row: 1/2;
+  grid-column: 3/4;
+  &:hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+}
+.hidde {
+  display: none;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.2em;
+  margin-top: 1em;
+  grid-column: 1/13;
+  grid-row: 1/2;
+  align-items: baseline;
+}
+.user_name {
+  font-size: 1.2em;
+  font-family: $header-font;
+  color: $lightblue;
+  font-weight: bold;
+  appearance: none;
+  padding: 0em;
+  box-sizing: border-box;
+  border: none;
+  align-items: center;
+  width: 60%;
+  caret-color: $darkBrown;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+  @media screen and (min-width: 400px) {
+    font-size: 1.5em;
+    width: 50%;
+  }
+  @media screen and (min-width: 500px) {
+    font-size: 1.5em;
+    width: 40%;
+  }
+  @media screen and (min-width: 700px) {
+    font-size: 1.7em;
+  }
+  @media screen and (min-width: 800px) {
+    font-size: 2em;
+  }
+}
+.label_profile_picture{
+  cursor:pointer;
+  position: relative;
+  top:-2em;
+  left: 3em;
+}
+.logo_camara{
+  background-color: white;
+  border-radius: 0.5em;
+}
+.update_img{
+  opacity: 0;
+  position: absolute;
+}

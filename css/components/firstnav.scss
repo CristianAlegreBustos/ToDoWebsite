@@ -1,0 +1,50 @@
+.first_nav {
+  display: grid;
+  grid-column: 1/13;
+  grid-template-columns: repeat(12, 0.5fr);
+  padding-inline-start: 0px;
+  margin: 0;
+  @media screen and (min-width: 425px) {
+    margin-top: 1rem;
+  }
+}
+.nav {
+  display: inline-flex;
+  font-family: $paragraph-font;
+  color: $darkBrown;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.menu {
+  grid-column: 1/2;
+  cursor:pointer;
+  @media screen and (min-width: 425px) {
+    font-size: x-large;
+    margin-left: 1rem;
+  }
+  &:hover {
+    border: 2.5px solid $darkBrown;
+  }
+}
+
+.search {
+  grid-column: 9/10;
+
+  &_logo {
+    width: 100%;
+  }
+}
+.notification {
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.2);
+  }
+  &_logo {
+    width: 100%;
+  }
+  grid-column: 11/12;
+}
